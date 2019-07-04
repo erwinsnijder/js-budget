@@ -16,7 +16,11 @@ class UI {
     this.itemID = 0;
   }
   submitBudgetForm() {
-    console.log('hello');
+    const value = this.budgetInput.value
+    if(value==='' || value <0){
+      this.budgetFeedback.classList.add('showItem');
+      this.budgetFeedback.innerHTML = `<p> Value cannot be empty or negative!</p>`;
+    }
   }
 }
 
