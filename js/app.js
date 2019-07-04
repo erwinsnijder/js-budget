@@ -19,9 +19,22 @@ class UI {
 
 
 function eventListeners() {
-const budgetForm = document.getElementById('budget-form');
+const budgetForm  = document.getElementById('budget-form');
 const expenseForm = document.getElementById('expense-form');
 const expenseList = document.getElementById('expense-list');
+
+const UI = new UI()
+
+
+budgetForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+})
+
+expenseForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+})
+
+expenseList.addEventListener('click', function() {});
 }
 
 document.addEventListener('DOMContentLoaded', function() {
