@@ -66,6 +66,20 @@ class UI {
       self.expenseFeedback.classList.remove('showItem');
     }, 4000)
     }
+    else {
+      let amount = parseInt(amountValue);
+      this.expenseInput = '';
+      this.amountInput = '';
+
+      let expense = {
+        id:this.itemID,
+        title:expenseValue,
+        amount:amount,
+      }
+      this.itemID++;
+      this.itemList.push(expense);
+      this.addExpense(expense)
+    }
   }
 
   totalExpense(){
